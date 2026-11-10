@@ -1,7 +1,7 @@
 {
   "name": "dsh-hongyi",
-  "version": "0.1.0",
-  "description": "鸿驿（Hongyi）— 用一个邮箱把 DSH 的状态、任务进度、指令与文件送到手机上，不需要公网 IP、不需要自建服务器。",
+  "version": "1.1.0",
+  "description": "用你已有的邮箱（IMAP/SMTP）把 DSH 的状态、任务列表、指令与文件中转到手机。不需要公网 IP、端口映射或自建中转服务器；默认读写邮箱草稿箱，不在收件箱弹提醒。",
   "type": "module",
   "main": "./index.js",
   "license": "MIT",
@@ -42,6 +42,7 @@
     "scripts/",
     "locale/",
     "icon.svg",
+    "assets/",
     "manifest.json",
     "cordis.patch.yml",
     "docs/",
