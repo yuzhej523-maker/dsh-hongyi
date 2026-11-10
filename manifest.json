@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "manifestVersion": "0.15",
+  "id": "dsh.hongyi",
+  "name": "鸿驿 Hongyi",
+  "version": "0.1.0",
+  "facets": {
+    "host": {
+      "entry": "index.js",
+      "apiVersion": "v1"
+    }
+  },
+  "contributes": {
+    "x-client": [
+      {
+        "entry": "client.js",
+        "slot": "settings.section",
+        "id": "hongyi"
+      }
+    ]
+  },
+  "x-note": "本文件是给人/给 APK 读的辅助描述（协议版本、入口、能力），DSH 运行时不读取它；DSH 真正读取的插件清单是本目录的 package.json（dsh.bundle.patch + dsh.client）。",
+  "x-protocol": {
+    "envelopeVersion": 1,
+    "types": ["telemetry", "file", "command", "ack", "event"],
+    "docs": "docs/PROTOCOL.md"
+  },
+  "x-home": "~/.dsh/hongyi/（= $DSH_HOME/hongyi/）"
+}

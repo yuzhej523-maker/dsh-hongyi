@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Hongyi relay">
+  <defs>
+    <linearGradient id="hy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f6df6"/>
+      <stop offset="1" stop-color="#7b4cf0"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="12" width="56" height="40" rx="9" fill="url(#hy)"/>
+  <path d="M10 18 L32 36 L54 18" fill="none" stroke="#ffffff" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  <circle cx="32" cy="36" r="4.5" fill="#ffffff"/>
+  <path d="M46 22 h10" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" opacity="0.75"/>
+  <path d="M8 22 h8" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" opacity="0.75"/>
+</svg>

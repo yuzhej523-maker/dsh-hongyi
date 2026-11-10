@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Hongyi relay",
+    "description": "Syncs DSH status and files to a WorkBuddy cloud mailbox for the phone APK, and runs commands it sends back."
+  }
+}

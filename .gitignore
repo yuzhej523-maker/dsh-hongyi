@@ -1,0 +1,23 @@
+# 忽略运行时与本地环境产物
+node_modules/
+.dsh/
+*.log
+
+# 备份文件
+*.bak
+*.bak-*
+*.pre-*
+client-transfer-card.snippet.txt
+
+# 打包产物（发布时现打）
+*.tgz
+
+# 本地探针输出
+probe-*.log
+regress-*.log
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
