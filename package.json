@@ -60,10 +60,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hongyi-relay/dsh-hongyi.git"
+    "url": "git+https://github.com/yuzhej523-maker/dsh-hongyi.git"
   },
   "bugs": {
-    "url": "https://github.com/hongyi-relay/dsh-hongyi/issues"
+    "url": "https://github.com/yuzhej523-maker/dsh-hongyi/issues"
   },
-  "homepage": "https://github.com/hongyi-relay/dsh-hongyi#readme"
+  "homepage": "https://github.com/yuzhej523-maker/dsh-hongyi#readme"
 }

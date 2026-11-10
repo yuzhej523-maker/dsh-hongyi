@@ -110,13 +110,20 @@ if (found) {
   }
 }
 
-// ack = 删草稿
+// ack = 把草稿挪进垃圾箱
 const acked = await quiet.ack([envelope.id])
 if (acked.acked.length > 0) ok('ack 执行完成', acked.acked.join(','))
-else bad('ack 没有删掉任何草稿')
+else bad('ack 没有处理任何草稿')
+
+// 断言「我这一封消失了」，而不是断言「草稿总数回到原值」。
+// 原因：relay 在后台一直往草稿箱写遥测、拉走之后再删，总数时刻在抖；
+// 按总数判断会随机失败（2026-11-10 实测：明明删掉了却报「没清干净」）。
+const afterAckList = await quiet.pull({ limit: 200 })
+const survived = afterAckList.some((item) => item.envelope?.id === envelope.id)
+if (!survived) ok('这封草稿已不在草稿箱（ack 真的删掉了）', `ack=${acked.acked.join(',') || '无'}`)
+else bad('这封草稿仍在草稿箱（ack 没删掉）')
 const draftsAfterAck = await draftCount()
-if (draftsAfterAck === draftsBefore) ok('草稿箱回到原来数量（没污染用户草稿）', `${draftsBefore} → ${draftsAfterAck}`)
-else bad('草稿箱没清干净', `${draftsBefore} → ${draftsAfterAck}`)
+console.log(`   参考：草稿箱 ${draftsBefore} → ${draftsAfterAck}（后台 relay 会并发增删，故不据此判定）`)
 
 // 对照：非静默模式的 describe 文案不同
 if (quiet.describe().quiet === true && loud.describe().quiet === false) ok('describe 正确区分静默/普通模式', quiet.describe().label)

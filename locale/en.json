@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Hongyi relay",
-    "description": "Syncs DSH status and files to a WorkBuddy cloud mailbox for the phone APK, and runs commands it sends back."
+    "description": "Relays DSH status, task list, commands and files to your phone through an existing mailbox (IMAP/SMTP); no public IP or relay server needed, and the draft folder keeps inbox notifications away."
   }
 }
