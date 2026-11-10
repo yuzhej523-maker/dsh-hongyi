@@ -92,9 +92,9 @@ function publicState(config, credentials, relayStatus = null) {
   return {
     ok: true,
     plugin: 'dsh-hongyi',
-    version: '0.4.0',
+    version: '1.1.0',
     protocol: PROTOCOL_VERSION,
-    phase: 4,
+    phase: 5,
     home: hongyiHome(),
     config: {
       enabled: config.enabled,
